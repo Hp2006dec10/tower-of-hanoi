@@ -1,5 +1,0 @@
-- Click on any disk.
-- Once the disk is lifted from the peg, place this disk in any other peg you wish to move.
-- You cannot move a disk to a peg whose top disk is smaller the currently lifted disk.
-- One player can only make one move.
-- You can also drag and drop a disk to some other peg.

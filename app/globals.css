@@ -40,16 +40,22 @@ body {
 }
 
 .peg-invalid {
-  animation: flash 0.4s ease;
+  animation: flash 0.4s ease, shake 0.4s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
 }
 
 @keyframes flash {
   0% {
-    border-color: rgba(248, 113, 113, 0.9);
-    background: rgba(255, 1, 1, 0.5);
+    border-color: rgba(239, 68, 68, 0.9);
+    background: rgba(239, 68, 68, 0.2);
   }
   100% {
-    border-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
   }
 }
@@ -67,4 +73,19 @@ body {
 
 .flicker-text {
   animation: flicker 1.5s ease-in-out infinite;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
